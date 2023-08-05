@@ -15,7 +15,7 @@ function Cart() {
   const cart = useSelector(getCart);
 
   function handleClearCart() {
-    dispatch(clearCart);
+    dispatch(clearCart());
   }
 
   if (!cart.length) return <EmptyCart />;
