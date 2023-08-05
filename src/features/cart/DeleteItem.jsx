@@ -4,15 +4,11 @@ import Button from "../../ui/Button";
 
 import { deleteItem } from "./cartSlice";
 
-function DeleteItem({ oizzaId }) {
+function DeleteItem({ pizzaId }) {
   const dispatch = useDispatch();
 
-  function handleDeleteItem(pizzaId) {
-    dispatch(deleteItem);
-  }
-
   return (
-    <Button type="small" onClick={handleDeleteItem}>
+    <Button type="small" onClick={() => dispatch(deleteItem(pizzaId))}>
       Delete
     </Button>
   );
